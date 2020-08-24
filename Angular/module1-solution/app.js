@@ -7,16 +7,16 @@
     LunchCheckController.$inject = ['$scope'];
 
     function LunchCheckController($scope) {
-      $scope.dishes = $scope.dishes;
-      $scope.numberOfDishes;
+      $scope.meal = $scope.meal;
+      $scope.numberOfMeal;
       $scope.message = "";
       $scope.messageType = "";
 
       $scope.checkIfTooMuch = function() {
-        if(!$scope.dishes) {
+        if(!$scope.meal) {
           $scope.message = "Please enter data first";
           $scope.messageType = 'alert-success'
-        } else if (checkDishesLength($scope.dishes) < 4) {
+        } else if (checkMealLength($scope.meal) < 4) {
           $scope.message = "Enjoy!";
           $scope.messageType = 'alert-success'
         } else {
@@ -26,15 +26,15 @@
       };
 
       function checkDishesLength(dishes) {
-        var dishesArr = dishes.split(",");
-        angular.forEach(dishesArr, function(value, key) {
+        var mealArr = meal.split(",");
+        angular.forEach(mealArr, function(value, key) {
           console.log("value: " + value);
           if(!value || value == " ") {
             console.log("Remove the value: " + value);
-            dishesArr.splice(key, 1);
+            mealArr.splice(key, 1);
           }
         });
-        return dishesArr.length;
+        return mealArr.length;
       }
     }
 })();
