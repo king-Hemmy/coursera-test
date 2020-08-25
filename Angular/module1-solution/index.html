@@ -3,7 +3,8 @@
   <head>
     <title>Lunch Checker</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+    <script src="Js/angular.min.js"></script>
+    <script src="Js/app.js"></script>
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <style>
       .message { font-size: 1.3em; font-weight: bold; }
@@ -17,7 +18,7 @@
           </div>
 
          <div class="form-group">
-             <input id="lunch-menu" ng-model="meal" name="meal" type="text"
+             <input id="lunch-menu" ng-model="dishes" name="dishes" type="text"
              placeholder="list comma separated dishes you usually have for lunch"
              class="form-control">
          </div>
@@ -30,7 +31,6 @@
            </div>
          </div>
    </div>
-<script src="Js/angular.min.js"></script>
-<script src="Js/app.js"></script>
+
 </body>
 </html>
